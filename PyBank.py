@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[16]:
+# In[38]:
 
 
 import os
 import csv 
 
 
-# In[17]:
+# In[39]:
 
 
 csvpath = os.path.join("Homework_03-Python_Instructions_PyBank_Resources_budget_data.csv")
 
 
-# In[18]:
+# In[40]:
 
 
 total_months = 0
@@ -41,7 +41,7 @@ with open(csvpath) as csvfile:
             monthly_change = 0
 
 
-# In[19]:
+# In[41]:
 
 
 #print(total_months)
@@ -49,7 +49,7 @@ with open(csvpath) as csvfile:
 #print(total_change)
 
 
-# In[20]:
+# In[42]:
 
 
 average_change = round(sum(total_change)/len(months), 2)
@@ -68,7 +68,7 @@ date_max_loss = months[total_change.index(min(total_change))]
 #print(date_max_loss)
 
 
-# In[21]:
+# In[37]:
 
 
 print(f"Financial Analysis")
@@ -78,6 +78,23 @@ print(f"Total Months: {total_months}")
 print(f"Average  Change: ${average_change}")
 print(f"Greatest Increase in Profits: {date_max_profit} (${max_profit})")
 print(f"Greatest Decrease in Profits: {date_max_loss} (${max_loss})")
+
+#To txt file:
+output_file = os.path.join("PyBank_result.txt")
+with open(output_file, "w", newline="") as resultfile:
+    resultfile.write(f"Financial Analysis")
+    resultfile.write(f"--------------------------")
+    resultfile.write(f"Your profit is: $ {total_revenue}")
+    resultfile.write(f"Total Months: {total_months}")
+    resultfile.write(f"Average  Change: ${average_change}")
+    resultfile.write(f"Greatest Increase in Profits: {date_max_profit} (${max_profit})")
+    resultfile.write(f"Greatest Decrease in Profits: {date_max_loss} (${max_loss})")
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
