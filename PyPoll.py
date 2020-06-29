@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[27]:
+# In[1]:
 
 
 import os
 import csv
-csvpath = os.path.join("Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv")
+csvpath = os.path.join("Resources", "Homework_03-Python_Instructions_PyPoll_Resources_election_data.csv")
 
 
-# In[28]:
+# In[2]:
 
 
 total_votes = 0
@@ -47,7 +47,7 @@ print(candidate_vote_count)
 print(winner)
 
 
-# In[29]:
+# In[3]:
 
 
 #To terminal
@@ -63,7 +63,7 @@ print(f"---------------------")
 
 
 #output txt file
-output_file = os.path.join("RyPoll__results.txt")
+output_file = os.path.join("Analysis","PyPoll__results.txt")
 with open(output_file, "w", newline="") as resultfile:
     resultfile.write(f"Election Results")
     resultfile.write(f"---------------------")
@@ -77,6 +77,12 @@ with open(output_file, "w", newline="") as resultfile:
 
    
   
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
